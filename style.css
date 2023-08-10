@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --font-family: 'Roboto', sans-serif;
+  
+  --background: #000000;
+  --color-text: #E1E1E6;
+  --button-text: #FFFFFF;
+  --placeholder: #7C7C8A;
+  --button: #065E7C;
+  --odd: rgba(6, 22, 27, 0.5);
+  --even: #06181C;
+  --action: #F75A68;
+  --primary: #4A808C;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--background);
+}
+
+body * {
+  font-family: var(--font-family);
+  color: var(--color-text);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#app {
+  padding: 2rem;
+  max-width: 1120px;
+  margin-inline: auto;
+  margin-top: 11.5rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 8.7rem;
+}
+
+.search {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.search input {
+  background: var(--even);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1.6rem;
+  width: 43rem;
+  color: var(--color-text);
+  box-sizing: content-box;
+}
+
+.search input::placeholder {
+  color: var(--placeholder);
+  font-size: 1.6rem;
+}
+
+.search button {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+
+  background-color: var(--button);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1.2rem 3.2rem;
+  color: var(--button-text);
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 2.4rem;
+
+  cursor: pointer;
+}
+
+.search button:hover {
+  background-color: var(--button-text);
+  color: var(--button);
+}
+
+.search button:hover svg path {
+  fill: var(--button);
+}
+
+main {
+  border: 0.1rem solid var(--primary);
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+table * {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table thead {
+  background: #092D38;
+  text-align: left;
+}
+
+thead tr {
+  display: flex;
+}
+
+thead th {
+  padding: 1.6rem 2.4rem 1.6rem 4rem
+}
+
+tbody {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 52rem;
+  overflow-y: overlay;
+}
+
+tbody::-webkit-scrollbar {
+    width: .6rem;
+    cursor: pointer;
+}
+
+tbody::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+tbody::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background: #4A808C;
+    cursor: pointer;
+    border-radius: .6rem;
+}
+
+tbody tr {
+  display: flex;
+  align-items: center;
+}
+
+thead tr th:nth-child(1),
+tbody tr td:nth-child(1) {
+    width: 50rem;
+    padding-left: 4rem;
+}
+
+thead tr th:nth-child(2),
+tbody tr td:nth-child(2) {
+    width: 20rem;
+}
+
+thead tr th:nth-child(3),
+tbody tr td:nth-child(3) {
+    width: 21.8rem;
+}
+
+thead tr th:nth-child(4),
+tbody tr td:nth-child(4) {
+    width: 17.8rem;
+}
+
+tbody td {
+  padding: 2.4rem 2.4rem 2.4rem 4rem;
+}
+
+tbody tr:nth-child(odd) {
+  background: var(--odd);
+}
+
+tbody tr:nth-child(even) {
+  background: var(--even);
+}
+
+tbody tr + tr {
+  border-top: 1px solid var(--primary);
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+td.user img {
+  width: 5.6rem;
+  height: 5.6rem;
+
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td.user a {
+  text-decoration: none;
+  gap: .8rem;
+}
+
+td.user a span {
+  font-weight: 400;
+}
+
+td .remove {
+  background: none;
+  border: none;
+
+  color: red;
+
+  cursor: pointer;
+}
+
+.empty {
+  height: 52rem;
+}
+
+.empty div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+}
+
+.empty img {
+  width: 13.2rem;
+  height: 12.5rem;
+}
+
+.empty p {
+  color: #4E5455;
+  font-weight: bold;
+  font-size: 4rem;
+}
